@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#cccccc">
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/cs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@color/colorAccent"
+                    app:layout_constraintLeft_toLeftOf="@id/cs"
+                    app:layout_constraintTop_toTopOf="@id/cs"
+                    app:layout_constraintBottom_toBottomOf="@id/cs"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+            />
+
+            <TextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="fjkdsbnfjksfhjksfhsjkfhsdjkfhsdjfs"
+                    android:textSize="21sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textAlignment="center"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/img"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textStyle="bold"
+            />
+
+            <TextView
+                    android:id="@+id/ratingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8.5"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@id/titleTxt"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/releaseTxt"/>
+
+            <TextView
+                    android:id="@+id/releaseTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2012"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleTxt"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/ratingTxt"
+                    android:visibility="visible"
+                    app:layout_constraintHorizontal_bias="0.5"/>
+
+            <TextView
+                    android:id="@+id/genreTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="genre"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/ratingTxt"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:visibility="visible"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
